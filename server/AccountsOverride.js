@@ -5,7 +5,7 @@ Accounts.registerLoginHandler( ( options ) => {
 
 
   let auth0Config     = Meteor.settings.auth0;
-  let loginOptions   = _.extend( options.user, {
+  let loginOptions    = _.extend( options.user, {
     'username':     options.user.email
   , 'grant_type':   auth0Config.passwordGrant
   , 'scope':        auth0Config.scope
@@ -23,10 +23,10 @@ Accounts.registerLoginHandler( ( options ) => {
     let params = {
         data: loginOptions
     };
-    let url = auth0Config.baseUrl + auth0Config.login
+    let url    = auth0Config.baseUrl + auth0Config.login
     let result = HttpHelper.post( url, params );
 
-    console.log('login', result);
+    console.log( '[Auth0 login:', result );
 
     if ( result.statusCode === StatusCode.Ok ) {
       let data = {
@@ -42,19 +42,20 @@ Accounts.registerLoginHandler( ( options ) => {
   }
   catch ( e ) {
     console.error( 'accountsOverride - auth0 login error: ', e );
-    throw new Meteor.Error(StatusCode.ServerError, 'Error occurred during login process' );
+    throw new Meteor.Error( StatusCode.ServerError, 'Error occurred during login process' );
   }
 
 
 } );
 
 Accounts.onCreateUser( ( options, user ) => {
-    if ( options.profile ) {
-        user.profile = options.profile;
-    }
-    if ( options.emails ) {
-        user.emails = options.emails;
-    }
 
-    return user;
-});
+  if ( options.profile ) {
+      user.profile = options.profile;
+  }
+  if ( options.emails ) {
+      user.emails = options.emails;
+  }
+
+  return user;
+} );
