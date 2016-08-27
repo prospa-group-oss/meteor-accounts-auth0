@@ -1,0 +1,17 @@
+{
+  "public": {
+    "isProduction": false
+  }
+
+, "auth0" : {
+    "baseUrl":                         "https://leblanc.au.auth0.com/"
+  , "clientId":                        "3XoohoOQPfTbDDz00d9OK07sbdbBidN9"
+  , "connection":                      "demo"
+  , "signUp":                          "dbconnections/signup"
+  , "login":                           "oauth/ro"
+  , "delegation":                      "delegation"
+  , "passwordGrant":                   "password"
+  , "jwtGrant":                        "urn:ietf:params:oauth:grant-type:jwt-bearer"
+  , "scope":                           "openid name email user_metadata"
+  }
+}

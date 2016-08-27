@@ -1,0 +1,73 @@
+<head>
+  <title>auth0</title>
+</head>
+
+<body>
+  {{> main}}
+</body>
+
+<template name="main">
+  <h1>Welcome to Meteor!</h1>
+
+  {{# if loggedIn }}
+
+    <div id="logout">
+      <button type="submit">Logout</button>
+    </div>
+  {{ else }}
+
+    {{# if stateLogin }}
+
+      <div id="login">
+        <h2>Login</h2>
+        <div>
+          <label for="">Email</label>
+          <input type="text" name="email">
+        </div>
+        <div>
+          <label for="">Password</label>
+          <input type="password" name="password">
+        </div>
+        <button type="submit">Login</button>
+        <div>
+          No acount, please <a href="#" role="goRegister">register</a>
+        </div>
+      </div>
+
+    {{ else}}
+
+      <div id="register">
+        <h2>Register</h2>
+        <div>
+          <label for="">Email</label>
+          <input type="text" name="email">
+        </div>
+        <div>
+          <label for="">Password</label>
+          <input type="password" name="password">
+        </div>
+        <button type="submit">Register</button>
+        <div>
+          Already having an account, please <a href="#" role="goLogin">login</a>
+        </div>
+      </div>
+
+    {{/if}}
+  {{ /if }}
+</template>
+
+<!-- <template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template>
+ -->
