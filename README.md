@@ -29,13 +29,13 @@ Clone the project from our bitbucket repo.
 Check the *settings.json* and amend the following values:
 
       "auth0" : {
-      "baseUrl":                         "https://[YOUR-AUTH-URL-HERE].auth0.com/"
-    , "clientId":                        "[YOUR-CLIENTID-HERE]"
+        "baseUrl":                         "https://[YOUR-AUTH-URL-HERE].auth0.com/"
+      , "clientId":                        "[YOUR-CLIENTID-HERE]"
       , "connection":                      "[YOUR-CONNECTION-DATABASE]"
       , "signUp":                          "dbconnections/signup"
-    , "login":                           "oauth/ro"
-    , "delegation":                      "delegation"
-    , "passwordGrant":                   "password"
+      , "login":                           "oauth/ro"
+      , "delegation":                      "delegation"
+      , "passwordGrant":                   "password"
       , "jwtGrant":                        "urn:ietf:params:oauth:grant-type:jwt-bearer"
       , "scope":                           "openid name email user_metadata"
     }

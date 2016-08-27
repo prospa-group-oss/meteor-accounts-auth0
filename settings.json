@@ -4,9 +4,9 @@
   }
 
 , "auth0" : {
-    "baseUrl":                         "https://leblanc.au.auth0.com/"
-  , "clientId":                        "3XoohoOQPfTbDDz00d9OK07sbdbBidN9"
-  , "connection":                      "demo"
+    "baseUrl":                         "[ADD URL HERE]"
+  , "clientId":                        "[ADD CLIENT ID HERE]"
+  , "connection":                      "[ADD DATABASE NAME HERE]"
   , "signUp":                          "dbconnections/signup"
   , "login":                           "oauth/ro"
   , "delegation":                      "delegation"
